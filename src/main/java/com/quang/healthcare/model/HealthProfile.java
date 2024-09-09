@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "HealthProfiles")
@@ -19,17 +18,13 @@ public class HealthProfile {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @Column(name = "height")
     private Float height;
 
     @Column(name = "current_weight")
     private Float currentWeight;
 
+    @Column(name = "bmi")
     private Float bmi;
-
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
 
 }
